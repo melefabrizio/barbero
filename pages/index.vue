@@ -6,29 +6,9 @@
         <a href="https://github.com/buefy/buefy">
           GitHub
         </a>
+        <button v-on:click="playTrack" data-url="/barbero-papi.mp3"> Play </button>
       </card>
 
-      <card title="Responsive" icon="cellphone-link">
-        <b class="has-text-grey">
-          Every
-        </b>
-        component is responsive
-      </card>
-
-      <card title="Modern" icon="alert-decagram">
-        Built with
-        <a href="https://vuejs.org/">
-          Vue.js
-        </a>
-        and
-        <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card title="Lightweight" icon="arrange-bring-to-front">
-        No other internal dependency
-      </card>
     </div>
   </section>
 </template>
@@ -41,6 +21,12 @@ export default {
 
   components: {
     Card
+  },
+  methods: {
+    playTrack(e){
+      this.$store.commit('changeTrack',e.target.dataset.url)
+      //this.$store.commit('play')
+    }
   }
 }
 </script>

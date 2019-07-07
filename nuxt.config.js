@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [ ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -36,8 +36,7 @@ export default {
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/pwa'
   ],
   /*
    ** Axios module configuration
