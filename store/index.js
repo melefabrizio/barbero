@@ -1,12 +1,14 @@
 export const state = () => ({
   playing:false,
   stopped:true,
-  audio: null
+  audio: null,
+  title:null
 })
 
 export const mutations = {
-  changeTrack(state, newTrack) {
-    state.audio = newTrack
+  changeTrack(state, payload) {
+    state.audio = payload.url
+    state.title = payload.title
 
   },
   stop(state){
